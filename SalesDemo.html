@@ -1,0 +1,26 @@
+<html>
+<style>
+    #sales-form {
+        background: orange;
+    }
+</style>
+
+    <script src="https://ruby-java-9863.my.salesforce.com/lightning/salesform.js"></script>
+
+    <script>
+        $Lightning.use("c:aura",    // name of the Lightning app
+            function() {                  // Callback once framework and app loaded
+                $Lightning.createComponent(
+                    "c:salesform", // top-level component of your app
+                    { },                  // attributes to set on the component when created
+                    document.getElementById("sales-form"),   // the DOM location to insert the component
+                    function(cmp) {
+                        // callback when component is created and active on the page
+                        console.log("component callback")
+                    }
+                );
+            },
+            'https://ruby-java-9863.lightning.force.com/'  // Experience Cloud site endpoint 
+        );
+    </script>
+</html>
