@@ -1,19 +1,13 @@
-<html>
-    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
-    <body>
-        <div id="sales-form">Hello</div>
-    </body>
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" controller="MyController">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ruby-java-9863.lightning.force.com/lightning/lightning.out.js"></script>
     <style>
         #sales-form {
-            background: orange;
+            background: yellow;
         }
     </style>
-
-
-
-    <script src="https://ruby-java-9863.lightning.force.com/lightning/lightning.out.js"></script>
-
-    <script>
+        <div id="sales-form">Hello</div>
+  <script>
         $Lightning.use("c:auraApp",    // name of the Lightning app
             function() {                  // Callback once framework and app loaded
                 $Lightning.createComponent(
@@ -29,4 +23,4 @@
             'https://ruby-java-9863.lightning.force.com', 'access-token'  // Experience Cloud site endpoint 
         );
     </script>
-</html>
+</apex:page>
