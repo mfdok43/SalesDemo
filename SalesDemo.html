@@ -20,11 +20,11 @@
                     document.getElementById("sales-form"),   // the DOM location to insert the component
                     function(cmp) {
                         // callback when component is created and active on the page
-                        console.log("component callback")
+                        console.log("component callback", { $Lightning})
                     }
                 );
             },
-            'https://cesofni-sales.lightning.force.com'  // Experience Cloud site endpoint 
+            'https://cesofni-sales.lightning.force.com', ''  // Experience Cloud site endpoint 
         );
     </script>
 </apex:component>
