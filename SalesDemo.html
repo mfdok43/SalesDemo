@@ -23,6 +23,8 @@
                         console.log("out callback", { $Lightning })
                     }
                 );
-            });
+            },
+            'https://cesofni-sales.lightning.force.com', '{! $Api.Session_ID }'   // Experience Cloud site endpoint 
+        );
     </script>
 </apex:component>
