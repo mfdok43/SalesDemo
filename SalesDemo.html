@@ -2,15 +2,15 @@
     <script src="https://cesofni-sales.lightning.force.com/lightning/lightning.out.js"></script>
     <style>
         #sales-form {
-            background: grey;
-            width: 480px;
+            width: 100%;
+            max-width: 320px;
         }
 
         #salesform-container {
             display: flex;
         }
     </style>
-        <div id="sales-form">Sales form container</div>
+        <div id="sales-form"></div>
   <script>
         $Lightning.use("c:salesFormApp",    // name of the Lightning app
             function() {                  // Callback once framework and app loaded
