@@ -25,4 +25,21 @@
             'https://cesofni-sales.lightning.force.com', '{! $Api.Session_ID }'   // Experience Cloud site endpoint 
         );
     </script>
+    <script type="text/javascript">
+ window.addEventListener('getCookies', function (event) {
+ event.detail.value = document.cookie;
+ return event;
+ });
+window.addEventListener('addCookies', function(event){
+ let {cookieName, cookieValue, expireInDays, domain} = event.detail;
+ let expires = "";
+ if (expireInDays) {
+ let date = new Date();
+ date.setTime(date.getTime() + (expireInDays * 24 * 60 * 60 * 1000));
+ expires = "; expires=" + date.toUTCString();
+ }
+ let domainAttribute = domain ? "; domain=" + domain : "";
+ document.cookie = cookieName + "=" + (cookieValue || "") + expires + domainAttribute + "; path=/";
+ });
+</script>
 </apex:component>
